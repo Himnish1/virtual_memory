@@ -3,6 +3,8 @@ The following project makes use of two pieces of software, namely Weensy OS and 
 
 When you run Weensy OS, it displays a visual representation of both physical and virtual memory. Highlighted memory addresses indicate the pages accessible by each process upon execution. Below are two labeled memory diagrams, showing what the characters mean and how memory is arranged:
 
+![](images/Capture1.PNG)
+
 Initial state of memory shows no isolation, address space abstraction and processes cannot implement fork nor exit.
 
 ![](images/Fig-memos-initial.gif)
