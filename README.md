@@ -10,16 +10,19 @@ Initial state of memory shows no isolation, address space abstraction and proces
 Implemented isolation using virtual memory, so that a process cannot modify kernel or other processes’ code/data + abstract address space for each process + fork and exit system calls on Weensy OS such that upon calling specific allocator programs on the machine, we can get desired behavior of memory usage and allocation.
 
 Normal allocator:
+
 ![](Fig-memos-overlapping.gif)
 
 Write protected kernel address space (as shown by the K-pages not being highlighted when processes run), isolated address spaces by allocating a page table for each process, changed algorithm to allocate physical pages and sharing stack.
 
 Forking allocator:
+
 ![](Fig-memos-fork.gif)
 
 Implemented forking of processes, with adequate copying of data and mappings
 
 Fork-exit allocator (runs indefinitely):
+
 ![](Fig-memos-forkexit.gif)
 
 Implemented exit and clean-up whenever physical pages are used up.
